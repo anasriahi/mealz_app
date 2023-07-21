@@ -5,5 +5,5 @@ import com.riahi.domain.entity.CategoryResponse
 import com.riahi.domain.repo.MealsRepo
 
 class MealsRepoImpl(private val apiService: ApiService): MealsRepo {
-    override fun getMealsFromRemote(): CategoryResponse = apiService.getMeals()
+    override suspend fun getMealsFromRemote(): CategoryResponse = apiService.getMeals()
 }
